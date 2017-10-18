@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/ll_whole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_like"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/lv_test"
+            android:layout_alignTop="@+id/lv_test">
+
+            <com.nick.jikelikedemo.RippView
+                android:id="@+id/rv_test"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:alpha="0.2" />
+
+
+            <ImageView
+                android:id="@+id/img_un_like"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_messages_like_unselected" />
+
+            <ImageView
+                android:id="@+id/img_like"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_messages_like_selected"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_like_shining"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_messages_like_selected_shining"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <com.nick.jikelikedemo.TextScrollView
+            android:id="@+id/lv_test"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/rl_like"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_whole"
+        android:hint="请输入>0的数字"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/bt_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_set"
+        android:text="设置" />
+
+    <Button
+        android:id="@+id/bt_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_set"
+        android:text="+1" />
+
+    <Button
+        android:id="@+id/bt_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_up"
+        android:text="-1" />
+</RelativeLayout>
